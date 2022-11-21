@@ -2,7 +2,8 @@ from .base_page import BasePage
 from .locators import MainPageLocators
 
 
-class MainPage(BasePage):  # BasePage в скобках указывает на то, что MainPage - его наследник
+# BasePage в скобках указывает на то, что MainPage - его наследник
+class MainPage(BasePage):
     def go_to_login_page(self):
         login_link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
         login_link.click()
