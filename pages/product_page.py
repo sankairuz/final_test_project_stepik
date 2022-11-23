@@ -15,3 +15,10 @@ class ProductPage(BasePage):
         name_end = self.browser.find_element(*ProductPageLocators.PRODUCT_PAGE_VER_NAME).text
         print(price, price_end, name, name_end)
         return price == price_end and name == name_end
+
+    def success_message_add_to_card(self):
+        assert self.is_not_element_present(
+            *ProductPageLocators.SUCCESS_MESSAGE), 'Сообщение о добавлении в корзину появилось, а не должно'
+
+    def success_message_is_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), 'Сообщение о добавлении не пропадает'
