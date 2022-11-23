@@ -19,3 +19,4 @@ class ProductPageLocators:
     PRODUCT_PAGE_PRICE = (By.CSS_SELECTOR, '.col-sm-6 .price_color')
     PRODUCT_PAGE_VER_NAME = (By.CSS_SELECTOR, '.alertinner strong')
     PRODUCT_PAGE_VER_PRICE = (By.CSS_SELECTOR, '.alertinner p strong')
+    SUCCESS_MESSAGE = (By.XPATH, '//*[@id="messages"]/div[1]/div')
