@@ -4,6 +4,7 @@ from selenium.common.exceptions import NoAlertPresentException, NoSuchElementExc
     TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+
 from .locators import BasePageLocators
 
 
@@ -81,16 +82,19 @@ class BasePage:
         return True
 
     def go_to_login_page(self):
+        """ Переход в страницу авторизации """
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
 
     def should_be_login_link(self):
+        """ Видна ли кнопка Войти """
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
 
-
     def go_to_basket(self):
+        """  Переход в корзину """
         self.browser.find_element(*BasePageLocators.BTN_BASKET).click()
 
     def basket_empty(self):
+        """ Пуста ли корзина """
         message = self.browser.find_element(*BasePageLocators.MESSGAGE_BASKET_EMPTY).text
         assert 'Ваша корзина пуста' in message, 'Корзина не пуста'
