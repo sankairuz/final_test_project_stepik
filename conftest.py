@@ -11,7 +11,7 @@ def pytest_addoption(parser):
     parser.addoption('--language', action='store', default='ru, en')
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def browser(request):
     browser_name = request.config.getoption('browser_name')
     lang = request.config.getoption('language')
