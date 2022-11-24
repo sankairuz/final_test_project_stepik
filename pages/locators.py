@@ -20,3 +20,7 @@ class ProductPageLocators:
     PRODUCT_PAGE_VER_NAME = (By.CSS_SELECTOR, '.alertinner strong')
     PRODUCT_PAGE_VER_PRICE = (By.CSS_SELECTOR, '.alertinner p strong')
     SUCCESS_MESSAGE = (By.XPATH, '//*[@id="messages"]/div[1]/div')
+
+
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
