@@ -14,7 +14,7 @@ class LoginPageLocators():
 
 class ProductPageLocators:
     BTN_ADD_TO_BASKET = (By.CLASS_NAME, 'btn-add-to-basket')
-    GO_TO_BASKET = (By.CSS_SELECTOR, 'span a.btn-default.btn')
+    BTN_BASKET = (By.CSS_SELECTOR, 'span a.btn-default.btn')
     PRODUCT_PAGE_NAME = (By.CSS_SELECTOR, '.col-sm-6 h1')
     PRODUCT_PAGE_PRICE = (By.CSS_SELECTOR, '.col-sm-6 .price_color')
     PRODUCT_PAGE_VER_NAME = (By.CSS_SELECTOR, '.alertinner strong')
@@ -24,3 +24,5 @@ class ProductPageLocators:
 
 class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    BTN_BASKET = (By.CSS_SELECTOR, 'span a.btn-default.btn')
+    MESSGAGE_BASKET_EMPTY = (By.CSS_SELECTOR, '#content_inner p')
